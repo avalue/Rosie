@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.Bind;
 import com.karumi.rosie.sample.R;
 import com.karumi.rosie.sample.base.view.activity.MarvelActivity;
 import com.karumi.rosie.sample.characters.CharactersModule;
@@ -35,17 +34,19 @@ import java.util.Arrays;
 import java.util.List;
 import javax.inject.Inject;
 
+import butterknife.BindView;
+
 public class CharacterDetailsActivity extends MarvelActivity
     implements CharacterDetailsPresenter.View {
 
   private static final String CHARACTER_KEY_EXTRA = "CharacterDetailsActivity.CharacterKey";
 
-  @Bind(R.id.tv_toolbar_title) TextView toolbarTitleView;
-  @Bind(R.id.iv_character_image) ImageView characterHeaderView;
-  @Bind(R.id.ll_character_detail) View characterDetailView;
-  @Bind(R.id.tv_character_name) TextView characterNameView;
-  @Bind(R.id.tv_description) TextView characterDescriptionView;
-  @Bind(R.id.loading) RotateLoading loadingView;
+  @BindView(R.id.tv_toolbar_title) TextView toolbarTitleView;
+  @BindView(R.id.iv_character_image) ImageView characterHeaderView;
+  @BindView(R.id.ll_character_detail) View characterDetailView;
+  @BindView(R.id.tv_character_name) TextView characterNameView;
+  @BindView(R.id.tv_description) TextView characterDescriptionView;
+  @BindView(R.id.loading) RotateLoading loadingView;
 
   @Inject @Presenter CharacterDetailsPresenter presenter;
 

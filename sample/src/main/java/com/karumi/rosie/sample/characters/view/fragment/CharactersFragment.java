@@ -23,7 +23,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import butterknife.Bind;
 import com.karumi.dividers.Direction;
 import com.karumi.dividers.DividerBuilder;
 import com.karumi.dividers.DividerItemDecoration;
@@ -46,10 +45,12 @@ import java.util.Collection;
 import java.util.List;
 import javax.inject.Inject;
 
+import butterknife.BindView;
+
 public class CharactersFragment extends MarvelFragment implements CharactersPresenter.View {
 
-  @Bind(R.id.rv_characters) RecyclerView charactersView;
-  @Bind(R.id.loading) RotateLoading loadingView;
+  @BindView(R.id.rv_characters) RecyclerView charactersView;
+  @BindView(R.id.loading) RotateLoading loadingView;
 
   @Inject @Presenter CharactersPresenter presenter;
 

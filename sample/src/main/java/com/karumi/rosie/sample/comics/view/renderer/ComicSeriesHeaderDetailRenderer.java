@@ -22,18 +22,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.Bind;
 import com.karumi.rosie.sample.R;
 import com.karumi.rosie.sample.base.view.renderer.MarvelRenderer;
 import com.karumi.rosie.sample.comics.view.viewmodel.ComicSeriesDetailViewModel;
 import com.karumi.rosie.sample.comics.view.viewmodel.ComicSeriesHeaderDetailViewModel;
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
+
 public class ComicSeriesHeaderDetailRenderer extends MarvelRenderer<ComicSeriesDetailViewModel> {
 
-  @Bind(R.id.iv_cover) ImageView coverView;
-  @Bind(R.id.tv_rating) TextView ratingView;
-  @Bind(R.id.tv_description) TextView descriptionView;
+  @BindView(R.id.iv_cover) ImageView coverView;
+  @BindView(R.id.tv_rating) TextView ratingView;
+  @BindView(R.id.tv_description) TextView descriptionView;
 
   @Override public void render() {
     super.render();
